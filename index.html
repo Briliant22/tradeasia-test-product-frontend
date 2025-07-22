@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tradeasia Products</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Styles -->
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .card-title {
+        font-size: 1.1rem;
+        color: #0f1b3f;
+      }
+
+      .btn-outline-primary {
+        border: 2px solid #00a8e8;
+        color: #00a8e8;
+      }
+
+      .btn-outline-primary:hover {
+        background-color: #00a8e8;
+        color: white;
+      }
+
+      .form-select {
+        width: 150px;
+      }
+
+      .search-wrapper {
+        width: 100%;
+      }
+
+      .search-bar {
+        padding-right: 2.5rem;
+        border-radius: 20px;
+      }
+
+      .search-icon {
+        pointer-events: none;
+        color: #6c757d;
+      }
+
+      .top-bar {
+        background-color: #083b6e;
+        padding: 1rem 2rem;
+        color: white;
+      }
+
+      .top-bar .form-control {
+        border-radius: 50px;
+      }
+
+      .top-bar .bi-globe {
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+
+  <body class="bg-light">
+    <!-- Top Navbar (Simplified Version) -->
+    <div class="top-bar d-flex justify-content-between align-items-center">
+      <img src="logo-wh.png" alt="Tradeasia Logo" style="height: 80px" />
+      <div class="d-flex align-items-center gap-3">
+        <div class="position-relative search-wrapper">
+          <input
+            type="text"
+            class="form-control search-bar ps-4 pe-5"
+            placeholder="Search for a chemical product by name"
+          />
+          <i
+            class="bi bi-search search-icon position-absolute end-0 top-50 translate-middle-y me-3"
+          ></i>
+        </div>
+        <i class="bi bi-globe fs-1"></i>
+      </div>
+    </div>
+
+    <div class="container-fluid py-5 px-4">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="fw-bold">Product List</h1>
+        <select id="languageSelector" class="form-select">
+          <option value="en">English</option>
+          <option value="id">Bahasa</option>
+        </select>
+      </div>
+
+      <div id="product-list" class="row gy-4">
+        <!-- Product cards injected here -->
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Product Details</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div id="modal-content">
+              <!-- Dynamic modal content -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
