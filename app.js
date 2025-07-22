@@ -88,7 +88,7 @@ function renderProductList(products) {
 
   products.forEach((product, index) => {
     const card = `
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3">
         <div class="card h-100 border-0 shadow-sm">
           <img src="${product.image_url}" class="card-img-top" alt="${product.name}" style="height: 200px; object-fit: cover;" />
           <div class="card-body text-center">
